@@ -1,0 +1,42 @@
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-10rem);
+  }
+
+  80% {
+    transform: translate(1rem);
+  }
+
+  100% {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translate(10rem);
+  }
+
+  80% {
+    transform: translate(-1rem);
+  }
+
+  100% {
+    transform: initial;
+    opacity: initial;
+  }
+}
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    transform: initial;
+    opacity: initial;
+  }
+}
