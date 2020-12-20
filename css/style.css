@@ -308,13 +308,37 @@ body {
     text-align: center; }
   .card__price-box {
     color: #fff;
-    margin-bottom: 8rem; }
+    margin-bottom: 5rem; }
   .card__price-only {
     font-size: 1.4rem;
     text-transform: uppercase; }
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  .story > * {
+    transform: skew(12deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    background-color: orange;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem); }
+  .story__img {
+    height: 100%; }
 
 .row {
   max-width: 114rem;
@@ -371,5 +395,9 @@ body {
 
 .section-tours {
   background-color: #f3f2f2;
-  padding: 25rem 0 50rem;
+  padding: 25rem 0 15rem;
   margin-top: -10rem; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f3f2f2; }
