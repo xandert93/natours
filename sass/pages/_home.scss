@@ -27,7 +27,37 @@
   margin-top: -10rem;
 }
 
-.section-stories {
+.section-testimonials {
+  position: relative;
   padding: 15rem 0;
-  background-color: $color-grey-light-1;
+}
+
+.section-booking {
+  padding: 15rem 0;
+  background: linear-gradient(
+    135deg,
+    $color-primary-light,
+    $color-primary-dark
+  );
+}
+
+.booking {
+  background: linear-gradient(
+      105deg,
+      rgba($color-white, 0.85) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-10.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50rem;
+  width: 100%;
+  border-radius: $bord-rad-light;
+  box-shadow: $box-shadow-medium;
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+  }
 }

@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  list-style-type: inherit;
+  text-decoration: inherit;
 }
 
 html {
@@ -12,4 +14,5 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
 }
