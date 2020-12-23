@@ -1,0 +1,81 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%; //positioning children as absolute will otherwise collapse this container
+  background-color: rgba($color-black, 0.8);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+
+  &__content-box {
+    @include absCenter;
+    background-color: $color-white;
+    border-radius: $bord-rad-light;
+    box-shadow: $box-shadow-medium;
+    border: 0.5rem solid $color-white;
+    display: flex;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.8s 0.2s;
+  }
+
+  &__left-side {
+    flex-basis: 33.3333333%;
+    overflow: hidden;
+  }
+  &__right-side {
+    flex-basis: 66.66666666%;
+    align-self: center;
+    padding: 3rem 3rem;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    min-height: 50%;
+    border-radius: $bord-rad-light;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-grey-light-2;
+  }
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+
+    .popup__content-box {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-grey-dark;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      display: inline-block;
+      transition: all 0.2s;
+      line-height: 01;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
