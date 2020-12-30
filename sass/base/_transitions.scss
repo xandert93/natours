@@ -1,0 +1,27 @@
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.3s;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.slide-in {
+  opacity: 0;
+  transition: 3s;
+
+  &.left {
+    transform: translateX(-100%);
+  }
+
+  &.right {
+    transform: translateX(100%);
+  }
+
+  &.left.appear,
+  &.right.appear {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

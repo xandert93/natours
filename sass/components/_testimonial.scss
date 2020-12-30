@@ -1,24 +1,24 @@
-.story {
+.testimonial {
   position: relative;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   box-shadow: $box-shadow-medium;
-  background-color: $color-white;
+  background-color: rgba($color-white, 0.65);
   border-radius: 3px;
-  padding: 6rem;
-  padding-left: 9rem;
+  padding: 6rem 10rem;
   font-size: $default-font-size;
-  transform: skewX(-12deg);
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
 
   &__shape {
+    position: relative;
     width: 15rem;
     height: 15rem;
     float: left;
     background-color: orange;
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
+    margin-right: 2.5rem;
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skew(12deg);
   }
 
   &__img {
@@ -26,10 +26,6 @@
     transform: translateX(-3.7rem) scale(1.4);
     backface-visibility: hidden;
     transition: 0.5s;
-  }
-
-  &__text {
-    transform: skew(12deg);
   }
 
   &__caption {

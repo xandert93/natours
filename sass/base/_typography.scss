@@ -12,7 +12,7 @@
     letter-spacing: 3.5rem;
     font-size: 6rem;
     font-weight: 400;
-    animation: fromLeft 1s ease-out;
+    animation: fromLeft 1.5s 0.5s ease-out backwards;
   }
 
   &--sub {
@@ -20,7 +20,7 @@
     letter-spacing: 1.75rem;
     font-size: 2rem;
     font-weight: 700;
-    animation: fromRight 1s ease-out;
+    animation: fromRight 2s 2s ease-out backwards;
   }
 }
 
@@ -46,10 +46,8 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
-  transition: all 0.2s;
 
   &:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5em 1rem 2rem rgba($color-black, 0.2);
   }
 }
