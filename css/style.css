@@ -23,7 +23,7 @@
     opacity: 0;
     transform: translateY(3rem); }
   80% {
-    transform: translateY(-0.5rem); }
+    transform: translateY(-0.3rem); }
   100% {
     transform: initial;
     opacity: initial; } }
@@ -41,7 +41,7 @@
   .slide-in.left {
     transform: translateX(-100%); }
   .slide-in.right {
-    transform: translateX(100%); }
+    transform: translateX(80%); }
   .slide-in.left.appear, .slide-in.right.appear {
     opacity: 1;
     transform: translateX(0); }
@@ -183,7 +183,7 @@ body {
 .btn--animated {
   animation: fromBottom 1.2s ease-out backwards; }
   .btn--animated-header {
-    animation-delay: 4s; }
+    animation-delay: 3s; }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
