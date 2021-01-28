@@ -14,6 +14,11 @@
     text-align: center;
     cursor: pointer;
     box-shadow: $box-shadow-medium;
+
+    @include mqRespond(tab-port) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
@@ -29,6 +34,10 @@
       $color-primary-dark
     );
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+    @include mqRespond(tab-port) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
   &__nav {
     height: 100vh;

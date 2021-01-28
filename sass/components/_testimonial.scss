@@ -9,6 +9,16 @@
   font-size: $default-font-size;
   clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
 
+  @include mqRespond(tab-port) {
+    width: 100%;
+    padding: 4rem 8rem;
+  }
+
+  @include mqRespond(mob) {
+    clip-path: initial;
+    padding: 4rem 5rem;
+  }
+
   &__shape {
     position: relative;
     width: 15rem;

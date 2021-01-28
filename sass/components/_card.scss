@@ -169,4 +169,54 @@
     font-size: 6rem;
     font-weight: 100;
   }
+
+  @include mqRespond(tab-port) {
+    height: auto;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: $color-white;
+    box-shadow: $box-shadow-light;
+
+    &__side {
+      position: relative;
+      height: 100%;
+      border-radius: initial;
+      box-shadow: initial;
+
+      &--back {
+        transform: initial;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: initial;
+    }
+
+    &__details {
+      padding: 0.7rem 3rem;
+      font-size: 3rem;
+    }
+
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: initial;
+      width: 100%;
+      padding: 7rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-only {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+    &__price-value {
+      font-size: 4rem;
+    }
+  }
 }

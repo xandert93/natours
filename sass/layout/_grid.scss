@@ -1,15 +1,35 @@
 .row {
   max-width: $grid-width;
+  @include mqRespond(tab-port) {
+    max-width: 60rem;
+    padding: 0 3rem;
+  }
   display: flex;
   margin: 0 auto;
 
+  @include mqRespond(tab-port) {
+    flex-wrap: wrap;
+  }
+
   &:not(:last-child) {
     margin-bottom: $gap-y;
+    @include mqRespond(tab-port) {
+      margin-bottom: $gap-y-sm;
+    }
   }
 
   [class^='col-'] {
     &:not(:last-child) {
       margin-right: $gap-x;
+
+      @include mqRespond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gap-y-sm;
+      }
+    }
+
+    @include mqRespond(tab-port) {
+      flex-basis: 100% !important;
     }
   }
 

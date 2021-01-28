@@ -4,3 +4,35 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+//MQ ORDER: base, typography --> layout folder (grid, then header, footer etc.) --> pages --> components
+
+//MEDIA QUERY MANAGER
+@mixin mqRespond($deviceName) {
+  @if $deviceName == desktop-lg {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+  @if $deviceName == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $deviceName == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $deviceName == mob {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $deviceName == mob-sm {
+    @media (max-width: 30em) {
+      @content;
+    }
+  }
+}

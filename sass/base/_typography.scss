@@ -1,8 +1,15 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  list-style-type: none;
+  text-decoration: none;
+}
+
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 0;
   white-space: nowrap;
   backface-visibility: hidden;
   margin-bottom: 6rem;
@@ -10,6 +17,9 @@
   &--main {
     display: block;
     letter-spacing: 3.5rem;
+    @include mqRespond(mob) {
+      letter-spacing: 1.5rem;
+    }
     font-size: 6rem;
     font-weight: 400;
     animation: fromLeft 1.5s 0.5s ease-out backwards;
@@ -18,19 +28,13 @@
   &--sub {
     display: block;
     letter-spacing: 1.75rem;
+    @include mqRespond(mob) {
+      letter-spacing: 0.5rem;
+    }
     font-size: 2rem;
     font-weight: 700;
     animation: fromRight 2s 2s ease-out backwards;
   }
-}
-
-body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: $color-grey-dark;
-  list-style-type: none;
-  text-decoration: none;
 }
 
 .heading-secondary {
@@ -46,6 +50,13 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
+
+  @include mqRespond(tab-port) {
+    font-size: 3rem;
+  }
+  @include mqRespond(mob) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     text-shadow: 0.5em 1rem 2rem rgba($color-black, 0.2);
