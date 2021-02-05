@@ -1,4 +1,5 @@
 .navigation {
+  user-select: none;
   & > *:not(&__nav) {
     display: none;
   }

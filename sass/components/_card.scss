@@ -2,6 +2,7 @@
   perspective: 60rem;
   -moz-perspective: 150rem;
   position: relative;
+  user-select: none;
   // height: 52rem;
   height: 47rem;
   &__side {

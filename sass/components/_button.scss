@@ -10,6 +10,7 @@
     transition: transform 0.2s, box-shadow 0.2s, opacity 1.3s;
     position: relative;
     font-size: $default-font-size;
+    user-select: none;
 
     //change for the <button> element
     cursor: pointer;
