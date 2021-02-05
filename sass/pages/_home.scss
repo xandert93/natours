@@ -38,6 +38,7 @@
   @include mqRespond(tab-port) {
     padding: 20rem 0 10rem;
   }
+  overflow-x: hidden;
 }
 
 .section-testimonials {
@@ -46,6 +47,7 @@
   @include mqRespond(tab-port) {
     padding: 10rem 0;
   }
+  overflow-x: hidden;
 }
 
 .section-booking {

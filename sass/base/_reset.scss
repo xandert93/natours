@@ -30,5 +30,5 @@ body {
   @include mqRespond(tab-port) {
     padding: 0;
   }
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
