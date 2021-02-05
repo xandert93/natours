@@ -621,8 +621,8 @@ body {
     @media (max-width: 56.25em) {
       .popup__content-box {
         width: 80%;
-        max-height: 90vh;
-        overflow-y: scroll; } }
+        max-height: 70vh;
+        overflow-y: auto; } }
   .popup__left-side {
     flex-basis: 33.3333333%; }
     @media (max-width: 56.25em) {

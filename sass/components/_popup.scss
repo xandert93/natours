@@ -15,8 +15,8 @@
     width: 70%;
     @include mqRespond(tab-port) {
       width: 80%;
-      max-height: 90vh;
-      overflow-y: scroll;
+      max-height: 70vh;
+      overflow-y: auto;
     }
 
     background-color: $color-white;
