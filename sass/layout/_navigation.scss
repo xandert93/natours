@@ -16,6 +16,7 @@
     right: 10rem;
     left: 18rem;
     transition: all 0.5s;
+    animation: fromTop 1.2s 4s backwards;
 
     &--scrolled {
       top: 0;
@@ -139,6 +140,7 @@
       }
     }
     &__nav {
+      animation: none;
       height: 100vh;
       position: fixed;
       top: 0;

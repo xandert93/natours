@@ -28,6 +28,16 @@
     transform: initial;
     opacity: initial; } }
 
+@keyframes fromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem); }
+  80% {
+    transform: translateY(0.3rem); }
+  100% {
+    transform: initial;
+    opacity: initial; } }
+
 .fade-in {
   opacity: 0;
   transition: opacity 1.3s; }
@@ -666,7 +676,8 @@ body {
   top: 6.5rem;
   right: 10rem;
   left: 18rem;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  animation: fromTop 1.2s 4s backwards; }
   .navigation__nav--scrolled {
     top: 0;
     right: 3rem;
@@ -766,6 +777,7 @@ body {
 
 @media (max-width: 56.25em) {
   .navigation__nav {
+    animation: none;
     height: 100vh;
     position: fixed;
     top: 0;
