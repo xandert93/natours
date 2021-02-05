@@ -15,7 +15,7 @@
     top: 6.5rem;
     right: 10rem;
     left: 18rem;
-    transition: all 0.5s;
+    transition: all 0.5s ease-in-out;
     animation: fromTop 1.2s 4s backwards;
 
     &--scrolled {
