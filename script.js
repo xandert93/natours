@@ -14,18 +14,17 @@ function intersectionHandler(entriesArr) {
   entriesArr.forEach((entry) => {
     if (!entry.isIntersecting) {
       return;
-    } else {
-      entry.target.classList.add('appear');
-      aosObserver.unobserve(entry.target);
-      entry.target.ontransitionend = () =>
-        entry.target.classList.remove(
-          'fade-in',
-          'slide-in',
-          'appear',
-          'left',
-          'right'
-        );
     }
+    entry.target.classList.add('appear');
+    aosObserver.unobserve(entry.target);
+    entry.target.ontransitionend = () =>
+      entry.target.classList.remove(
+        'fade-in',
+        'slide-in',
+        'appear',
+        'left',
+        'right'
+      );
   });
 }
 

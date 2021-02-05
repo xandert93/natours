@@ -1,15 +1,17 @@
 .fade-in {
   opacity: 0;
   transition: opacity 1.3s;
-}
+  pointer-events: none;
 
-.fade-in.appear {
-  opacity: 1;
+  &.appear {
+    opacity: 1;
+  }
 }
 
 .slide-in {
   opacity: 0;
   transition: 3s;
+  pointer-events: none;
 
   &.left {
     transform: translateX(-100%);
@@ -19,9 +21,11 @@
     transform: translateX(80%);
   }
 
-  &.left.appear,
-  &.right.appear {
-    opacity: 1;
-    transform: translateX(0);
+  &.left,
+  &.right {
+    &.appear {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }
