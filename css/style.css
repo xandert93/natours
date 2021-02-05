@@ -616,6 +616,11 @@ body {
     display: flex;
     transform: translate(-50%, -50%) scale(0);
     transition: 0.8s 0.2s; }
+    @media (max-width: 37.5em) {
+      .popup__content-box {
+        width: 80%;
+        height: 90vh;
+        overflow-y: scroll; } }
   .popup__left-side {
     flex-basis: 33.3333333%; }
     @media (max-width: 56.25em) {

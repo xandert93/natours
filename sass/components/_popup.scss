@@ -13,6 +13,12 @@
   &__content-box {
     @include absCenter;
     width: 70%;
+    @include mqRespond(mob) {
+      width: 80%;
+      height: 90vh;
+      overflow-y: scroll;
+    }
+
     background-color: $color-white;
     border-radius: $bord-rad-light;
     box-shadow: $box-shadow-medium;
