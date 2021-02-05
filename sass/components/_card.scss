@@ -2,8 +2,8 @@
   perspective: 60rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 52rem;
-
+  // height: 52rem;
+  height: 47rem;
   &__side {
     transition: all 0.8s ease;
     position: absolute;
@@ -130,7 +130,7 @@
   }
 
   &__details {
-    padding: 3rem;
+    // padding: 3rem;
     ul {
       list-style: none;
       width: 80%;
@@ -204,11 +204,11 @@
       left: 0;
       transform: initial;
       width: 100%;
-      padding: 7rem 4rem 4rem;
+      padding: 5rem 4rem 4rem;
     }
 
     &__price-box {
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
     }
 
     &__price-only {

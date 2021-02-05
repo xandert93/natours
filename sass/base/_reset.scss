@@ -20,6 +20,8 @@ html {
   @include mqRespond(tab-port) {
     font-size: 50%; //8px
   }
+
+  scroll-behavior: smooth;
 }
 
 body {

@@ -1,6 +1,10 @@
 .header {
   position: relative;
   height: 95vh;
+  user-select: none;
+  @include mqRespond(tab-port) {
+    height: 100vh;
+  }
   background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.8),
@@ -11,8 +15,8 @@
   @media (min-resolution: 192dpi) {
     background-image: linear-gradient(
         to right bottom,
-        rgba($color-secondary-light, 0.8),
-        rgba($color-secondary-dark, 0.8)
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
       ),
       url('../img/hero.jpg');
   }
@@ -22,13 +26,14 @@
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   @include mqRespond(tab-port) {
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 92vh, 0 100%);
   }
 
   &__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
+    z-index: 10;
   }
 
   &__logo {

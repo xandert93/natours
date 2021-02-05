@@ -1,5 +1,6 @@
 const faders = document.querySelectorAll('.fade-in'),
-  sliders = document.querySelectorAll('.slide-in');
+  sliders = document.querySelectorAll('.slide-in'),
+  navbar = document.querySelector('.navigation__nav');
 
 const aosObserver = new IntersectionObserver(intersectionHandler, {
   threshold: 0,
@@ -27,3 +28,11 @@ function intersectionHandler(entriesArr) {
     }
   });
 }
+
+window.onscroll = () => {
+  if (innerWidth > 900) {
+    pageYOffset > 70
+      ? navbar.classList.add('navigation__nav--scrolled')
+      : navbar.classList.remove('navigation__nav--scrolled');
+  }
+};
