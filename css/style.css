@@ -701,22 +701,25 @@ h2 {
   .navigation__nav {
     position: fixed;
     z-index: 20;
-    top: 6.5rem;
-    right: 10rem;
-    left: 18rem;
+    top: 7.5rem;
+    right: 6rem;
+    left: 6rem;
     transition: all 0.5s ease-in-out;
     animation: fromTop 1.2s 4s backwards; }
     .navigation__nav--scrolled {
       top: 0;
       right: 3rem;
       left: 3rem;
-      padding: 1rem 10rem;
+      padding: 0.9rem 0;
       background: linear-gradient(120deg, #0b7451, #45b86c); }
   .navigation__list {
     display: flex;
-    justify-content: space-evenly; }
+    justify-content: space-around; }
   .navigation__item:not(:last-child) {
     color: #fff; }
+  .navigation__logo {
+    height: 4rem;
+    padding: 0.3rem; }
   .navigation__item:last-child .navigation__link {
     border: 2px solid #f0b002;
     border-radius: 50px;
@@ -806,6 +809,9 @@ h2 {
       width: 100%; }
     .navigation__item {
       margin: 1rem; }
+    .navigation__logo {
+      height: 7rem;
+      padding: 0.3rem; }
     .navigation__link:link, .navigation__link:visited {
       font-size: 3rem;
       font-weight: 300;
@@ -898,12 +904,20 @@ h2 {
   background-image: linear-gradient(to right bottom, rgba(115, 214, 98, 0.8), rgba(11, 116, 81, 0.8)), url("../img/hero-small.jpg");
   background-size: cover;
   background-position: top; }
-  @media screen and (max-width: 56.25em) {
-    .header {
-      height: 100vh; } }
   @media screen and (min-resolution: 192dpi) and (min-width: 37.5em), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), screen and (min-width: 75em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(115, 214, 98, 0.8), rgba(11, 116, 81, 0.8)), url("../img/hero.jpg"); } }
+  .header__logo-box {
+    display: none; }
+  @media screen and (max-width: 56.25em) {
+    .header__logo-box {
+      display: initial;
+      position: absolute;
+      top: 4rem;
+      left: 4rem;
+      z-index: 10; }
+    .header__logo {
+      height: 3.5rem; } }
   @supports (clip-path: none) and (-webkit-clip-path: none) {
     .header {
       height: 95vh;
@@ -911,13 +925,6 @@ h2 {
       @media screen and (max-width: 56.25em) {
         .header {
           clip-path: polygon(0 0, 100% 0, 100% 92vh, 0 100%); } } }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-    z-index: 10; }
-  .header__logo {
-    height: 3.5rem; }
   .header__text-box {
     position: absolute;
     top: 50%;

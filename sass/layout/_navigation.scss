@@ -13,28 +13,39 @@
   &__nav {
     position: fixed;
     z-index: 20;
-    top: 6.5rem;
-    right: 10rem;
-    left: 18rem;
+    top: 7.5rem;
+    right: 6rem;
+    left: 6rem;
     transition: all 0.5s ease-in-out;
     animation: fromTop 1.2s 4s backwards;
+    // border: yellow solid 2px;
 
     &--scrolled {
       top: 0;
       right: 3rem;
       left: 3rem;
-      padding: 1rem 10rem;
+      padding: 0.9rem 0;
       background: linear-gradient(120deg, $color-primary-dark, $color-primary);
     }
   }
 
   &__list {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
 
   &__item:not(:last-child) {
     color: $color-white;
+  }
+
+  &__item {
+    &--logo-box {
+    }
+  }
+
+  &__logo {
+    height: 4rem;
+    padding: 0.3rem;
   }
 
   &__item:last-child &__link {
@@ -155,6 +166,11 @@
     }
     &__item {
       margin: 1rem;
+    }
+
+    &__logo {
+      height: 7rem;
+      padding: 0.3rem;
     }
     &__link {
       &:link,

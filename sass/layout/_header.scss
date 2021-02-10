@@ -2,9 +2,6 @@
   position: relative;
   height: 85vh;
   user-select: none;
-  @include mqRespond(tab-port) {
-    height: 100vh;
-  }
   background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.8),
@@ -23,6 +20,23 @@
       url('../img/hero.jpg');
   }
 
+  &__logo-box {
+    display: none;
+  }
+
+  @include mqRespond(tab-port) {
+    &__logo-box {
+      display: initial;
+      position: absolute;
+      top: 4rem;
+      left: 4rem;
+      z-index: 10;
+    }
+
+    &__logo {
+      height: 3.5rem;
+    }
+  }
   background-size: cover;
   background-position: top;
 
@@ -32,17 +46,6 @@
     @include mqRespond(tab-port) {
       clip-path: polygon(0 0, 100% 0, 100% 92vh, 0 100%);
     }
-  }
-
-  &__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-    z-index: 10;
-  }
-
-  &__logo {
-    height: 3.5rem;
   }
 
   &__text-box {
