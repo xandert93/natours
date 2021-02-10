@@ -12,6 +12,7 @@
     left: 0;
     height: 100%;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 0.7rem;
     box-shadow: $box-shadow-light;
@@ -171,7 +172,7 @@
     font-weight: 100;
   }
 
-  @include mqRespond(tab-port) {
+  @media screen and (max-width: 56.25em), screen and (hover: none) {
     height: auto;
     border-radius: 7px;
     overflow: hidden;

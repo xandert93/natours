@@ -106,18 +106,13 @@
       width: 7rem;
       background-color: $color-white;
       position: fixed;
-      top: 6rem;
-      right: 6rem;
+      top: 3rem;
+      right: 3rem;
       border-radius: 50%;
       z-index: 30;
       text-align: center;
       cursor: pointer;
       box-shadow: $box-shadow-medium;
-
-      @include mqRespond(tab-port) {
-        top: 3rem;
-        right: 3rem;
-      }
     }
     //Positioned centrally behind button
     &__background {
@@ -128,20 +123,16 @@
         $color-primary-dark
       );
       position: fixed;
-      top: 6.5rem;
-      right: 6.5rem;
+      top: 3.5rem;
+      right: 3.5rem;
       z-index: 10;
 
       border-radius: 50%;
 
       transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
-      @include mqRespond(tab-port) {
-        top: 3.5rem;
-        right: 3.5rem;
-      }
     }
     &__nav {
-      animation: none;
+      animation: initial;
       height: 100vh;
       position: fixed;
       top: 0;

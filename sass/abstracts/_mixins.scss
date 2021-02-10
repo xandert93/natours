@@ -10,28 +10,28 @@
 //MEDIA QUERY MANAGER
 @mixin mqRespond($deviceName) {
   @if $deviceName == desktop-lg {
-    @media (min-width: 112.5em) {
+    @media screen and (min-width: 112.5em) {
       @content;
     }
   }
   @if $deviceName == tab-land {
-    @media (max-width: 75em) {
+    @media screen and (max-width: 75em) {
       @content;
     }
   }
   @if $deviceName == tab-port {
-    @media (max-width: 56.25em) {
+    @media screen and (max-width: 56.25em) {
       @content;
     }
   }
 
   @if $deviceName == mob {
-    @media (max-width: 37.5em) {
+    @media screen and (max-width: 37.5em) {
       @content;
     }
   }
   @if $deviceName == mob-sm {
-    @media (max-width: 30em) {
+    @media screen and (max-width: 30em) {
       @content;
     }
   }

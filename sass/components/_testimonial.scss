@@ -24,11 +24,17 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    background-color: orange;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
+    border-radius: 50%;
     margin-right: 2.5rem;
     clip-path: circle(50% at 50% 50%);
+    overflow: hidden;
+    @supports (clip-path: none) and (-webkit-clip-path: none) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
   }
 
   &__img {

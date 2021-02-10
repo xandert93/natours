@@ -30,5 +30,11 @@ body {
   @include mqRespond(tab-port) {
     padding: 0;
   }
+
   // overflow-x: hidden;
+}
+
+*::selection {
+  background-color: $color-primary;
+  color: $color-white;
 }
