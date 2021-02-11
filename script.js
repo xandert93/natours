@@ -1,13 +1,15 @@
+//MOVE NAVBAR ON SCROLL FOR NON-MOBILE DEVICES
 const navbar = document.querySelector('.navigation__nav');
 
 window.onscroll = () => {
   if (innerWidth > 900) {
-    pageYOffset > 70
+    pageYOffset > 0
       ? navbar.classList.add('navigation__nav--scrolled')
       : navbar.classList.remove('navigation__nav--scrolled');
   }
 };
 
+//CHANGE SLIDE/FADE ON ELEMENTS DEPENDING ON DEVICE WIDTH
 window.onload = () => {
   let faders;
   let sliders;
@@ -68,5 +70,24 @@ window.onload = () => {
           'right'
         );
     });
+  }
+};
+
+//MAKE MODAL OUTSIDE CLICKABLE FOR EXIT
+const modal = document.querySelector('.popup');
+const modalBody = document.querySelector('.popup__body');
+const modalButton = document.querySelector('.popup__body a.btn');
+
+const showModal = (e) => {
+  e.preventDefault();
+  modal.classList.add('popup--appear');
+  modalBody.classList.add('popup__body--appear');
+};
+
+const closeModal = (e) => {
+  if (e.target === e.currentTarget) {
+    e.target !== modalButton && e.preventDefault();
+    modal.classList.remove('popup--appear');
+    modalBody.classList.remove('popup__body--appear');
   }
 };

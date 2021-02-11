@@ -15,14 +15,24 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s;
+  cursor: pointer;
 
-  &__content-box {
+  &--appear {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__body {
     @include absCenter;
     width: 70%;
     @include mqRespond(tab-port) {
       width: 80%;
       max-height: 70vh;
       overflow-y: auto;
+    }
+    cursor: initial;
+    &--appear {
+      transform: translate(-50%, -50%) scale(1);
     }
 
     background-color: $color-white;
@@ -73,14 +83,14 @@
     column-rule: 1px solid $color-grey-light-2;
   }
 
-  &:target {
-    visibility: visible;
-    opacity: 1;
+  // &:target {
+  //   visibility: visible;
+  //   opacity: 1;
 
-    .popup__content-box {
-      transform: translate(-50%, -50%) scale(1);
-    }
-  }
+  //   .popup__body {
+  //     transform: translate(-50%, -50%) scale(1);
+  //   }
+  // }
 
   &__close {
     &:link,

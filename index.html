@@ -42,7 +42,9 @@
             <a href="#section-testimonials" class="navigation__link">Reviews</a>
           </li>
           <li class="navigation__item">
-            <a href="#popup" class="navigation__link">Booking</a>
+            <a href="#" onclick="showModal(event)" class="navigation__link"
+              >Booking</a
+            >
           </li>
         </ul>
       </nav>
@@ -208,7 +210,9 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">£299</p>
                   </div>
-                  <a href="#popup" class="btn btn--white">Book now!</a>
+                  <a href="#" onclick="showModal(event)" class="btn btn--white"
+                    >Book now!</a
+                  >
                 </div>
               </div>
             </div>
@@ -238,7 +242,9 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">£399</p>
                   </div>
-                  <a href="#popup" class="btn btn--white">Book now!</a>
+                  <a href="#" onclick="showModal(event)" class="btn btn--white"
+                    >Book now!</a
+                  >
                 </div>
               </div>
             </div>
@@ -268,7 +274,9 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">£499</p>
                   </div>
-                  <a href="#popup" class="btn btn--white">Book now!</a>
+                  <a href="#" onclick="showModal(event)" class="btn btn--white"
+                    >Book now!</a
+                  >
                 </div>
               </div>
             </div>
@@ -466,14 +474,16 @@
       </div>
     </footer>
 
-    <div class="popup" id="popup">
-      <div class="popup__content-box">
+    <div class="popup" onclick="closeModal(event)" id="popup">
+      <div class="popup__body">
         <div class="popup__left-side">
           <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img" />
           <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img" />
         </div>
         <div class="popup__right-side">
-          <a href="#" class="popup__close">&times;</a>
+          <a href="#" onclick="closeModal(event)" class="popup__close"
+            >&times;</a
+          >
           <h2 class="heading-secondary u-margin-bottom-small">
             adventure awaits...
           </h2>
@@ -496,7 +506,12 @@
             donec. Sit amet facilisis magna etiam. Imperdiet sed euismod nisi
             porta.
           </p>
-          <a href="#section-booking" class="btn btn--green">Book now</a>
+          <a
+            href="#section-booking"
+            onclick="closeModal(event)"
+            class="btn btn--green"
+            >Book now</a
+          >
         </div>
       </div>
     </div>
