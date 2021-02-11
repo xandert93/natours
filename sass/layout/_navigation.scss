@@ -38,56 +38,22 @@
     color: $color-white;
   }
 
-  &__item {
-    &--logo-box {
-    }
-  }
-
   &__logo {
     height: 4rem;
     padding: 0.3rem;
   }
 
-  &__item:last-child &__link {
-    border: 2px solid $color-secondary-light;
-    border-radius: 50px;
-    background: $color-white;
-    color: $color-primary-dark;
-    opacity: 1;
-    &:hover {
-      background: $color-black;
-      border-color: $color-primary-light;
-      color: $color-white;
-      // transform: scale(0.9);
-      box-shadow: $box-shadow-medium;
-    }
-
-    &:active,
-    &:focus {
-      outline: none;
-      transform: initial;
-      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-    }
-
-    &::after {
-      display: none;
-    }
-  }
-
   &__link {
-    &:link,
-    &:visited {
-      display: inline-block;
-      font-size: 1.8rem;
-      font-weight: 500;
-      padding: 0.5rem 2.2rem;
-      color: inherit;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      position: relative;
-      transition: 0.2s;
-      opacity: 0.75;
-    }
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 0.5rem 2.2rem;
+    color: inherit;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    transition: 0.2s;
+    opacity: 0.75;
 
     &::after {
       content: '';
@@ -107,6 +73,31 @@
       opacity: 1;
       &::after {
         transform: scale(1);
+      }
+    }
+
+    &--btn {
+      border: 2px solid $color-secondary-light;
+      border-radius: 50px;
+      background: $color-white;
+      color: $color-primary-dark;
+      opacity: 1;
+      &:hover {
+        background: $color-black;
+        border-color: $color-primary-light;
+        color: $color-white;
+        box-shadow: $box-shadow-medium;
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+        transform: initial;
+      }
+
+      &::after {
+        display: none;
       }
     }
   }
@@ -172,29 +163,26 @@
       height: 7rem;
       padding: 0.3rem;
     }
-    &__link {
-      &:link,
-      &:visited {
-        font-size: 3rem;
-        font-weight: 300;
-        padding: 0.5rem 2.2rem;
-        text-decoration: none;
-        border-radius: 3px;
-        background-image: linear-gradient(
-          120deg,
-          transparent 50%,
-          $color-white 50%
-        );
-        background-size: 230%;
-        transition: 0.4s;
+    &__item:not(:last-child) &__link {
+      font-size: 3rem;
+      font-weight: 500;
+      padding: 0.5rem 2.2rem;
+      text-decoration: none;
+      border-radius: 3px;
+      background-image: linear-gradient(
+        120deg,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-size: 230%;
+      transition: 0.4s;
 
-        &::after {
-          display: none;
-        }
+      &::after {
+        display: none;
+      }
 
-        span {
-          margin-right: 1.5rem;
-        }
+      span {
+        margin-right: 1.5rem;
       }
 
       &:hover,
@@ -203,6 +191,11 @@
         color: $color-primary;
         transform: translateX(1rem);
       }
+    }
+
+    &__link--btn {
+      font-size: 3rem;
+      font-weight: 500;
     }
 
     &__checkbox:checked ~ &__background {

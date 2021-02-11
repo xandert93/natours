@@ -1,11 +1,11 @@
 //MOVE NAVBAR ON SCROLL FOR NON-MOBILE DEVICES
-const navbar = document.querySelector('.navigation__nav');
+const navBar = document.querySelector('.navigation__nav');
 
 window.onscroll = () => {
   if (innerWidth > 900) {
     pageYOffset > 0
-      ? navbar.classList.add('navigation__nav--scrolled')
-      : navbar.classList.remove('navigation__nav--scrolled');
+      ? navBar.classList.add('navigation__nav--scrolled')
+      : navBar.classList.remove('navigation__nav--scrolled');
   }
 };
 
@@ -73,21 +73,22 @@ window.onload = () => {
   }
 };
 
-//MAKE MODAL OUTSIDE CLICKABLE FOR EXIT
-const modal = document.querySelector('.popup');
-const modalBody = document.querySelector('.popup__body');
-const modalButton = document.querySelector('.popup__body a.btn');
+//OPEN/CLOSE MODAL on 7 ELEMENTS
+const toggleModal = (e) => {
+  e.target.getAttribute('href') !== '#section-booking' && e.preventDefault();
 
-const showModal = (e) => {
-  e.preventDefault();
-  modal.classList.add('popup--appear');
-  modalBody.classList.add('popup__body--appear');
+  if (e.target === e.currentTarget) {
+    const modal = document.querySelector('.popup');
+    const modalBody = document.querySelector('.popup__body');
+    modal.classList.toggle('popup--appear');
+    modalBody.classList.toggle('popup__body--appear');
+  }
 };
 
-const closeModal = (e) => {
-  if (e.target === e.currentTarget) {
-    e.target !== modalButton && e.preventDefault();
-    modal.classList.remove('popup--appear');
-    modalBody.classList.remove('popup__body--appear');
+//MOBILE NAVIGATION CLOSE AFTER CLICKING NAVLINK - EvLstr on nav container
+const closeNav = (e) => {
+  if (innerWidth <= 900 && e.target.classList.contains('navigation__link')) {
+    const navCheckbox = document.querySelector('.navigation__checkbox');
+    navCheckbox.checked = false;
   }
 };
