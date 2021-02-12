@@ -44,7 +44,7 @@
     height: 95vh;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     @include mqRespond(tab-port) {
-      clip-path: polygon(0 0, 100% 0, 100% 92vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
     }
   }
 

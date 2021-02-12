@@ -5,13 +5,13 @@
   // margin-top: -20rem;
 
   @include mqRespond(tab-port) {
-    padding: 20rem 0 22rem;
+    padding: 17rem 0 22rem;
     margin-top: -13vh;
   }
 }
 
 .section-features {
-  padding: 20rem 0;
+  padding: 28rem 0;
   background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.8),
@@ -19,15 +19,12 @@
     ),
     url('../img/nat-4.jpg');
   background-size: cover;
-  transform: skewY(-7deg);
-  margin-top: -10rem;
-
-  & > * {
-    transform: skewY(7deg);
-  }
+  margin-top: -20rem;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
 
   @include mqRespond(tab-port) {
-    padding: 12rem 0;
+    padding: 18rem 0;
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
   }
 }
 
@@ -36,7 +33,7 @@
   padding: 25rem 0 15rem;
   margin-top: -10rem;
   @include mqRespond(tab-port) {
-    padding: 20rem 0 10rem;
+    padding: 12rem 0 10rem;
   }
   overflow-x: hidden;
 }

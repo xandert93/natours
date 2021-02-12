@@ -28,21 +28,14 @@ window.onload = () => {
     toursSlider.classList.remove('slide-in');
     featuresFader.classList.remove('fade-in');
 
-    let tourCards = document.querySelectorAll(
-      '.section-tours > div.row > .col-1-of-3'
-    );
-    let featuresBoxes = document.querySelectorAll(
-      '.section-features > div.row > .col-1-of-4'
-    );
-
-    tourCards.forEach((tourCard) => {
-      tourCard.classList.add('fade-in');
-    });
-    featuresBoxes.forEach((featureBox) => {
-      featureBox.classList.add('fade-in');
-    });
+    Array.from(toursSlider.children)
+      .concat(Array.from(featuresFader.children))
+      .forEach((element) => {
+        element.classList.add('fade-in');
+      });
   }
 
+  //AOS INTERSECTION OBSERVER
   faders = document.querySelectorAll('.fade-in');
   sliders = document.querySelectorAll('.slide-in');
 
@@ -51,8 +44,10 @@ window.onload = () => {
     rootMargin,
   });
 
-  faders.forEach((fader) => aosObserver.observe(fader));
-  sliders.forEach((slider) => aosObserver.observe(slider));
+  //observe faders and sliders
+  Array.from(faders)
+    .concat(Array.from(sliders))
+    .forEach((faderOrSlider) => aosObserver.observe(faderOrSlider));
 
   function intersectionHandler(entriesArr) {
     entriesArr.forEach((entry) => {
@@ -74,10 +69,29 @@ window.onload = () => {
 };
 
 //OPEN/CLOSE MODAL on 7 ELEMENTS
-const toggleModal = (e) => {
-  e.target.getAttribute('href') !== '#section-booking' && e.preventDefault();
+//PREVIOUS - uses 7 event listeners
+// const toggleModal = (e) => {
+//   e.target.getAttribute('href') !== '#section-booking' && e.preventDefault();
 
-  if (e.target === e.currentTarget) {
+//   if (e.target === e.currentTarget) {
+//     const modal = document.querySelector('.popup');
+//     const modalBody = document.querySelector('.popup__body');
+//     modal.classList.toggle('popup--appear');
+//     modalBody.classList.toggle('popup__body--appear');
+//   }
+// };
+
+//CURRENT - uses 3 event listeners but more crap inside...?
+const toggleModal = (e) => {
+  if (
+    ['navigation__link navigation__link--btn', 'btn btn--white'].includes(
+      e.target.className
+    ) ||
+    ['popup popup--appear', 'popup__close', 'btn btn--green'].includes(
+      e.target.className
+    )
+  ) {
+    e.target.getAttribute('href') !== '#section-booking' && e.preventDefault();
     const modal = document.querySelector('.popup');
     const modalBody = document.querySelector('.popup__body');
     modal.classList.toggle('popup--appear');
@@ -85,7 +99,7 @@ const toggleModal = (e) => {
   }
 };
 
-//MOBILE NAVIGATION CLOSE AFTER CLICKING NAVLINK - EvLstr on nav container
+//MOBILE NAVIGATION CLOSE AFTER CLICKING NAVLINK - event listener on nav container
 const closeNav = (e) => {
   if (innerWidth <= 900 && e.target.classList.contains('navigation__link')) {
     const navCheckbox = document.querySelector('.navigation__checkbox');

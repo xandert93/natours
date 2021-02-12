@@ -40,10 +40,13 @@
 
 .fade-in {
   opacity: 0;
-  transition: opacity 1.3s;
+  transform: scale(0.5);
+  transform-origin: center bottom;
+  transition: all 1.5s;
   pointer-events: none; }
   .fade-in.appear {
-    opacity: 1; }
+    opacity: 1;
+    transform: scale(1); }
 
 .slide-in {
   opacity: 0;
@@ -928,7 +931,7 @@ h2 {
       clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
       @media screen and (max-width: 56.25em) {
         .header {
-          clip-path: polygon(0 0, 100% 0, 100% 92vh, 0 100%); } } }
+          clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } } }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -989,20 +992,19 @@ h2 {
   margin-top: -25vh; }
   @media screen and (max-width: 56.25em) {
     .section-about {
-      padding: 20rem 0 22rem;
+      padding: 17rem 0 22rem;
       margin-top: -13vh; } }
 
 .section-features {
-  padding: 20rem 0;
+  padding: 28rem 0;
   background-image: linear-gradient(to right bottom, rgba(115, 214, 98, 0.8), rgba(11, 116, 81, 0.8)), url("../img/nat-4.jpg");
   background-size: cover;
-  transform: skewY(-7deg);
-  margin-top: -10rem; }
-  .section-features > * {
-    transform: skewY(7deg); }
+  margin-top: -20rem;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%); }
   @media screen and (max-width: 56.25em) {
     .section-features {
-      padding: 12rem 0; } }
+      padding: 18rem 0;
+      clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); } }
 
 .section-tours {
   background-color: #f3f2f2;
@@ -1011,7 +1013,7 @@ h2 {
   overflow-x: hidden; }
   @media screen and (max-width: 56.25em) {
     .section-tours {
-      padding: 20rem 0 10rem; } }
+      padding: 12rem 0 10rem; } }
 
 .section-testimonials {
   position: relative;
