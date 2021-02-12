@@ -665,7 +665,10 @@ h2 {
     padding: 3rem 3rem; }
     @media screen and (max-width: 56.25em) {
       .popup__right-side {
-        flex-basis: 100%; } }
+        flex-basis: 100%;
+        align-self: initial; }
+        .popup__right-side a {
+          margin-bottom: 1.5rem; } }
   .popup__img {
     display: block;
     width: 100%;
@@ -683,7 +686,8 @@ h2 {
     column-rule: 1px solid #eee; }
     @media screen and (max-width: 56.25em) {
       .popup__text {
-        column-count: 1; } }
+        column-count: 1;
+        margin-bottom: 3rem; } }
   .popup__close:link, .popup__close:visited {
     color: #575757;
     position: absolute;

@@ -56,6 +56,11 @@
     padding: 3rem 3rem;
     @include mqRespond(tab-port) {
       flex-basis: 100%;
+      align-self: initial;
+
+      a {
+        margin-bottom: 1.5rem;
+      }
     }
   }
 
@@ -78,6 +83,7 @@
     column-count: 2;
     @include mqRespond(tab-port) {
       column-count: 1;
+      margin-bottom: 3rem;
     }
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light-2;
